@@ -41,9 +41,33 @@ public class MainActivity extends AppCompatActivity {
                 temp = (TextView) findViewById(R.id.txtCantidad);
                 double cantidad = Double.parseDouble(temp.getText().toString());
 
-                double respuesta = miConversor.convertir(0, de, a, cantidad);
-                temp = findViewById(R.id.lblRespuesta);
-                temp.setText("Respuesta: "+ respuesta);
+                double respuesta;
+
+                switch(tbh.getCurrentTabTag()) {
+                    case "longitud":
+                        spn = findViewById(R.id.spnDeLongitud);
+                        de = spn.getSelectedItemPosition();
+
+                        spn = findViewById(R.id.spnALongitud);
+                        a = spn.getSelectedItemPosition();
+
+                        cantidad = Double.parseDouble(temp.getText().toString());
+
+                        respuesta = miConversor.convertir(1, de, a, cantidad);
+                        temp = findViewById(R.id.lblRespuesta);
+                        temp.setText("Respuesta: "+ respuesta);
+                        break;
+                    case "monedas":
+                        respuesta = miConversor.convertir(0, de, a, cantidad);
+                        temp = findViewById(R.id.lblRespuesta);
+                        temp.setText("Respuesta: "+ respuesta);
+                        break;
+                    case "masa":
+                        respuesta = miConversor.convertir(2, de, a, cantidad);
+                        temp = findViewById(R.id.lblRespuesta);
+                        temp.setText("Respuesta: "+ respuesta);
+                        break;
+                }
             }
         });
     }
@@ -52,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
 class conversores{
     double[][] valores = {
             {1, 7.84, 24.66, 36.56, 580.23, 8.75, 0.94, 131.33, 82.54},//moendas
-            {}, //Longitudes
+            {1, 100, 3.28, 39.27, 1.20, 1.09, 0.001, 0.0006}, //Longitudes
             {}, //Peso
             {}, //almacenamiento
             {}, //transferencia de datos (internet)
