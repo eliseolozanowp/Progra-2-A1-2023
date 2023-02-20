@@ -1,5 +1,23 @@
 <resources>
     <string name="app_name">Conversores</string>
+    <string-array name="longitud">
+        <item>Metro</item>
+        <item>Centimetros</item>
+        <item>Pies</item>
+        <item>Pulgadas</item>
+        <item>Varas</item>
+        <item>Yardas</item>
+        <item>Kilometros</item>
+        <item>Millas</item>
+    </string-array>
+    <string-array name="almacenamiento">
+        <item>Megabyte</item>
+        <item>Bit</item>
+        <item>Byte</item>
+        <item>Kilobyte</item>
+        <item>Gigabyte</item>
+        <item>Terrabyte</item>
+    </string-array>
     <string-array name="monedas">
         <item>Dolar</item>
         <item>Quetzal</item>
@@ -10,23 +28,14 @@
         <item>Euro</item>
         <item>Yenes</item>
         <item>Rupias</item>
-    </string-array>
-    <string-array name="longitud">
-        <item>Metros</item>
-        <item>Centimetros</item>
-        <item>Pies</item>
-        <item>Pulgadas</item>
-        <item>Varas</item>
-        <item>Yardas</item>
-        <item>Kilometros</item>
-        <item>Millas</item>
+        <item>Libras</item>
     </string-array>
     <string-array name="masa">
-        <item>Libras</item>
+        <item>Libra</item>
         <item>Miligramos</item>
         <item>Gramos</item>
         <item>Onzas</item>
         <item>Kilogramos</item>
-        <item>Tonelada</item>
+        <item>Toneladas</item>
     </string-array>
 </resources>
